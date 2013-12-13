@@ -76,7 +76,13 @@
 #define AID_SDCARD_PICS   1033  /* external storage photos access */
 #define AID_SDCARD_AV     1034  /* external storage audio/video access */
 #define AID_SDCARD_ALL    1035  /* access all users external storage */
+<<<<<<< HEAD
 #define AID_AUDIT         1032  /* audit daemon */
+=======
+#define AID_AUDIT         1036  /* audit daemon */
+
+#define AID_THEMEMAN      1300  /* theme manager */
+>>>>>>> CM/cm-11.0
 
 #define AID_SHELL         2000  /* adb and debug shell user */
 #define AID_CACHE         2001  /* cache access */
@@ -182,8 +188,13 @@ static const struct android_id_info android_ids[] = {
     { "net_admin",     AID_NET_ADMIN, },
     { "net_bw_stats",  AID_NET_BW_STATS, },
     { "net_bw_acct",   AID_NET_BW_ACCT, },
+<<<<<<< HEAD
     { "qcom_oncrpc",   AID_QCOM_ONCRPC, },
     { "qcom_diag",     AID_QCOM_DIAG, },
+=======
+    { "qcom_oncrpc", AID_QCOM_ONCRPC, },
+    { "qcom_diag", AID_QCOM_DIAG, },
+>>>>>>> CM/cm-11.0
     { "net_bt_stack",  AID_NET_BT_STACK, },
 
 #if defined(MOTOROLA_UIDS)
@@ -204,6 +215,10 @@ static const struct android_id_info android_ids[] = {
 
     { "misc",          AID_MISC, },
     { "nobody",        AID_NOBODY, },
+<<<<<<< HEAD
+=======
+    { "theme_man", AID_THEMEMAN },
+>>>>>>> CM/cm-11.0
     { "audit",      AID_AUDIT, },
 };
 
@@ -238,6 +253,7 @@ static const struct fs_path_config android_dirs[] = {
     { 00775, AID_MEDIA_RW, AID_MEDIA_RW, 0, "data/media/Music" },
     { 00771, AID_SYSTEM, AID_SYSTEM, 0, "data" },
     { 00750, AID_ROOT,   AID_SHELL,  0, "sbin" },
+    { 00755, AID_ROOT,   AID_ROOT,   0, "system/addon.d" },
     { 00755, AID_ROOT,   AID_SHELL,  0, "system/bin" },
     { 00755, AID_ROOT,   AID_SHELL,  0, "system/vendor" },
     { 00755, AID_ROOT,   AID_SHELL,  0, "system/xbin" },
@@ -263,6 +279,7 @@ static const struct fs_path_config android_files[] = {
     { 00444, AID_RADIO,     AID_AUDIO,     0, "system/etc/AudioPara4.csv" },
     { 00555, AID_ROOT,      AID_ROOT,      0, "system/etc/ppp/*" },
     { 00555, AID_ROOT,      AID_ROOT,      0, "system/etc/rc.*" },
+    { 00755, AID_ROOT,      AID_ROOT,      0, "system/addon.d/*" },
     { 00644, AID_SYSTEM,    AID_SYSTEM,    0, "data/app/*" },
     { 00644, AID_MEDIA_RW,  AID_MEDIA_RW,  0, "data/media/*" },
     { 00644, AID_SYSTEM,    AID_SYSTEM,    0, "data/app-private/*" },

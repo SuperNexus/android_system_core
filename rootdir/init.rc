@@ -277,7 +277,11 @@ on post-fs-data
     #setprop vold.post_fs_data_done 1
 
 # Include extra init file
+<<<<<<< HEAD
     import /init.sn.rc
+=======
+    import /init.cm.rc
+>>>>>>> CM/cm-11.0
 
 on boot
 # basic network init
